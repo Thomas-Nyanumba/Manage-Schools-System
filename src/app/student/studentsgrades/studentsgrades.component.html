@@ -1,0 +1,53 @@
+<div>
+  <label for="form">Select Form:</label>
+  <select id="form" [(ngModel)]="selectedForm" (change)="filterStudents()">
+    <option value="">-- Select Form --</option>
+    <option *ngFor="let form of forms" [value]="form">{{ form }}</option>
+  </select>
+
+  <label for="stream">Select Stream:</label>
+  <select id="stream" [(ngModel)]="selectedStream" (change)="filterStudents()">
+    <option value="">-- Select Stream --</option>
+    <option *ngFor="let stream of streams" [value]="stream">{{ stream }}</option>
+  </select>
+</div>
+
+<!-- Show message if no students found -->
+<p *ngIf="filteredStudents.length === 0" class="error-message">No students found for the selected form and stream.</p>
+
+<!-- Display Table of Filtered Students -->
+<table *ngIf="filteredStudents.length > 0">
+  <thead>
+    <tr>
+      <th>Student Name</th>
+      <th>Stream</th>
+      <th>Form</th>
+      <th>Grade</th>
+      <th>Hobbies</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of filteredStudents">
+      <td>{{ student.StudentName }}</td>
+      <td>{{ student.Stream }}</td>
+      <td>{{ student.FormEnrollingInto }}</td>
+
+      <td>
+        <input type="text" [(ngModel)]="student.newGrade" placeholder="Enter Grade" />
+      <td>
+      <td> 
+        <input type="text" [(ngModel)]="student.Hobbies" placeholder="Enter Hobbies" />
+      </td>
+
+      <td><button (click)="updateGrade(student);updateHobbies(student)">Update</button></td>
+
+
+    
+      </tr>
+    
+  </tbody>
+</table>
+
+<!-- Success message -->
+<p *ngIf="updateMessage" class="success-message">{{ updateMessage }}</p>

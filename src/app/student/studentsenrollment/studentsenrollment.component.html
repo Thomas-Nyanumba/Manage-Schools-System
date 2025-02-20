@@ -1,0 +1,54 @@
+<div class="container">
+    <h2>Student Enrollment</h2>
+    <form [formGroup]="enrollmentForm" (ngSubmit)="onSubmit()">
+      
+      <div class="form-group">
+        <label for="StudentName">Student Name</label>
+        <input type="text" id="StudentName" formControlName="StudentName" class="form-control" placeholder="Enter student name" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="StudentID">Student ID</label>
+        <input type="text" id="StudentID" formControlName="StudentID" class="form-control" placeholder="Enter student ID" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="NextofKin">Next of Kin</label>
+        <input type="text" id="NextofKin" formControlName="NextofKin" class="form-control" placeholder="Enter next of kin name" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="PhoneNumber">Phone Number</label>
+        <input type="tel" id="PhoneNumber" formControlName="PhoneNumber" class="form-control" placeholder="07XXXXXXXX" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="DateofBirth">Date of Birth</label>
+        <input type="date" id="DateofBirth" formControlName="DateofBirth" class="form-control" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="FormEnrollingInto">Form Enrolling Into</label>
+        <select id="FormEnrollingInto" formControlName="FormEnrollingInto" class="form-control" required>
+          <option value="">Select Form</option>
+          <option value="Form 1">Form 1</option>
+          <option value="Form 2">Form 2</option>
+          <option value="Form 3">Form 3</option>
+          <option value="Form 4">Form 4</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="Stream">Stream</label>
+        <select id="Stream" formControlName="Stream" class="form-control" required>
+          <option value="">Select Stream</option>
+          <option value="West">West</option>
+          <option value="East">East</option>
+        </select>
+      </div>
+  
+      <button type="submit" class="btn-submit" [disabled]="enrollmentForm.invalid">Enroll Student</button>
+  
+    </form>
+  </div>
+  

@@ -1,0 +1,114 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "role": "admin",
+      "email": "admin@school.com",
+      "password": "password123"
+    },
+    {
+      "id": "2",
+      "email": "teacher@example.com",
+      "password": "teacher123",
+      "role": "Teacher"
+    },
+    {
+      "id": "3",
+      "email": "student@example.com",
+      "password": "student123",
+      "role": "Student"
+    },
+    {
+      "id": "9f85",
+      "email": "admin@school.com",
+      "password": "password123",
+      "role": "Admin"
+    },
+    {
+      "id": "c727",
+      "email": "teacher@gmail.com",
+      "password": "teacher123",
+      "role": "Teacher"
+    },
+    {
+      "id": "6194",
+      "email": "tee@gmail.com",
+      "password": "dededdeeew",
+      "role": "Student"
+    },
+    {
+      "id": "aa27",
+      "email": "thomas.nnyanumba@gmail.com",
+      "password": "123456678",
+      "role": "Student"
+    },
+    {
+      "id": "1000",
+      "email": "teacher@example.com",
+      "password": "teacher123",
+      "role": "Teacher"
+    }
+  ],
+  "students": [
+    {
+      "id": "ca5b",
+      "StudentName": "Thomas Nyanumba",
+      "StudentID": "6897",
+      "DateofBirth": "2019-05-21",
+      "FormEnrollingInto": "Form 2",
+      "Stream": "West",
+      "NextofKin": "Leo Linus",
+      "PhoneNumber": "0704939007",
+      "GPA": "3.2",
+      "Courses": "English, Mathematics",
+      "newGrade": "B+",
+      "Grade": "B+"
+    },
+    {
+      "id": "0e74",
+      "StudentName": "Nia Grace",
+      "StudentID": "23456",
+      "DateofBirth": "2006-05-16",
+      "FormEnrollingInto": "Form 2",
+      "Stream": "East",
+      "NextofKin": "Gift Henderson",
+      "PhoneNumber": "0740423674",
+      "Courses": "Kiswahili",
+      "Gender": "Female",
+      "Awards": "Captain",
+      "Age": "17"
+    },
+    {
+      "id": "d6dd",
+      "StudentName": "Greg",
+      "StudentID": "9090",
+      "DateofBirth": "2025-01-27",
+      "FormEnrollingInto": "Form 3",
+      "Stream": "West",
+      "NextofKin": "Lucy",
+      "PhoneNumber": "0740423674",
+      "newHobbies": "ggg",
+      "Hobbies": "ggg"
+    },
+    {
+      "id": "c746",
+      "StudentName": "Mike",
+      "StudentID": "9090",
+      "DateofBirth": "2025-01-28",
+      "FormEnrollingInto": "Form 3",
+      "Stream": "East",
+      "NextofKin": "Nobel",
+      "PhoneNumber": "0704939007",
+      "enrollmentStatus": "active",
+      "academicRecords": {
+        "GPA": 3.8,
+        "courses": [
+          "Math",
+          "Science",
+          "History"
+        ]
+      }
+    }
+  ]
+}

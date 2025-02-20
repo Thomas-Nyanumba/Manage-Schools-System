@@ -1,0 +1,85 @@
+<h2>Manage Student Profiles</h2>
+<table border="1">
+  <thead>
+    <tr>
+      <th>Student Name</th>
+      <th>Student ID</th>
+      <th>Date of Birth</th>
+      <th>Form</th>
+      <th>Stream</th>
+      <th>Next of Kin</th>
+      <th>Phone Number</th>
+      <th>GPA</th>
+      <th>Courses</th>
+      <th>Gender</th>
+      <th>Awards</th>
+      <th>Age</th>
+      <th>Actions</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students">
+      <td>{{ student.StudentName }}</td>
+      <td>{{ student.StudentID }}</td>
+      <td>{{ student.DateofBirth }}</td>
+      <td>{{ student.FormEnrollingInto }}</td>
+      <td>{{ student.Stream }}</td>
+      <td>{{ student.NextofKin }}</td>
+      <td>{{ student.PhoneNumber }}</td>
+      <td>{{student.GPA}}</td>
+      <td>{{student.Courses}}</td>
+      <td>{{student.Gender}}</td>
+      <td>{{student.Awards}}</td>
+      <td>{{student.Age}}</td>
+
+
+
+
+
+
+      <td>
+        <button (click)="editStudent(student)">Edit</button>
+        <button (click)="deleteStudent(student.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<div *ngIf="editMode">
+    <h3>Edit Student</h3>
+    <label>Name:</label>
+    <input [(ngModel)]="selectedStudent.StudentName" /><br />
+  
+    <label>Form:</label>
+    <input [(ngModel)]="selectedStudent.FormEnrollingInto" /><br />
+  
+    <label>Stream:</label>
+    <input [(ngModel)]="selectedStudent.Stream" /><br />
+  
+    <label>Next of Kin:</label>
+    <input [(ngModel)]="selectedStudent.NextofKin" /><br />
+  
+    <label>Phone Number:</label>
+    <input [(ngModel)]="selectedStudent.PhoneNumber" /><br />
+
+    <label>GPA:</label>
+    <input [(ngModel)]="selectedStudent.GPA" /><br />
+   
+    <label>Courses:</label>
+    <input [(ngModel)]="selectedStudent.Courses" /><br />
+  
+    <label>Gender:</label>
+    <input [(ngModel)]="selectedStudent.Gender"/><br />
+
+    <label>Awards:</label>
+    <input [(ngModel)]="selectedStudent.Awards" /><br />
+
+    <label>Age:</label>
+    <input [(ngModel)]="selectedStudent.Age" /><br />
+  
+    <button (click)="updateStudent()">Save Changes</button>
+    <button (click)="editMode = false">Cancel</button>
+  </div>
+  
