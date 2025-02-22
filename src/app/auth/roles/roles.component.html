@@ -1,1 +1,42 @@
-<p>roles works!</p>
+<div class="roles-container">
+    <h2>Manage Roles</h2>
+
+    <!-- Add New Role -->
+    <div class="add-role">
+      <input type="text" [(ngModel)]="newRole.name" placeholder="Role Name" required />
+      <input type="text" [(ngModel)]="newRole.description" placeholder="Role Description" />
+      <button (click)="addRole()">Add Role</button>
+    </div>
+
+    <!-- Roles Table -->
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
+      <tr *ngFor="let role of roles">
+        <td>{{ role?.id }}</td>
+
+        <!-- Name Column -->
+        <td>
+            <span *ngIf="editingRole?.id !== role?.id">{{ role?.name || 'N/A' }}</span>
+            <input *ngIf="editingRole?.id === role?.id" type="text" [(ngModel)]="editingRole!.name" />
+        </td>
+
+        <!-- Description Column -->
+        <td>
+            <span *ngIf="editingRole?.id !== role?.id">{{ role?.description || 'N/A' }}</span>
+            <input *ngIf="editingRole?.id === role?.id" type="text" [(ngModel)]="editingRole!.description" />
+        </td>
+
+        <!-- Actions -->
+        <td>
+          <button *ngIf="editingRole?.id !== role?.id" (click)="editRole(role)">Edit</button>
+          <button *ngIf="editingRole?.id === role?.id" (click)="saveRole()">Save</button>
+          <button (click)="deleteRole(role.id)">Delete</button>
+        </td>
+      </tr>
+    </table>
+</div>

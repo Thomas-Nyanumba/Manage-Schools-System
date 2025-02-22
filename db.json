@@ -62,8 +62,11 @@
       "PhoneNumber": "0704939007",
       "GPA": "3.2",
       "Courses": "English, Mathematics",
-      "newGrade": "B+",
-      "Grade": "B+"
+      "newGrade": "A",
+      "Grade": "A",
+      "Gender": "r",
+      "Awards": "rrr",
+      "Age": "45"
     },
     {
       "id": "0e74",
@@ -77,7 +80,10 @@
       "Courses": "Kiswahili",
       "Gender": "Female",
       "Awards": "Captain",
-      "Age": "17"
+      "Age": "17",
+      "Parent": "Evelyn Moraa",
+      "newGrade": "A",
+      "Hobbies": "Swimming and Hiking"
     },
     {
       "id": "d6dd",
@@ -109,6 +115,23 @@
           "History"
         ]
       }
+    }
+  ],
+  "roles": [
+    {
+      "id": "1",
+      "name": "Admin",
+      "description": "Administrator role"
+    },
+    {
+      "id": "2",
+      "name": "Teacher",
+      "description": "Teacher role"
+    },
+    {
+      "id": "3",
+      "name": "Student",
+      "description": "Student role"
     }
   ]
 }

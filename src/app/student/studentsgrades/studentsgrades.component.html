@@ -24,6 +24,7 @@
       <th>Form</th>
       <th>Grade</th>
       <th>Hobbies</th>
+      <th>Parent</th>
       <th>Action</th>
     </tr>
   </thead>
@@ -35,17 +36,18 @@
 
       <td>
         <input type="text" [(ngModel)]="student.newGrade" placeholder="Enter Grade" />
-      <td>
-      <td> 
-        <input type="text" [(ngModel)]="student.Hobbies" placeholder="Enter Hobbies" />
       </td>
-
-      <td><button (click)="updateGrade(student);updateHobbies(student)">Update</button></td>
-
-
+        <td>
+          <input type="text" [(ngModel)]="student.Hobbies" placeholder="Enter Hobbies" />
+        </td>
+        <td>
+          <input type="text" [(ngModel)]="student.Parent" placeholder="Enter Parent" />
+        </td>
+      <td><button (click)="updateGrade(student);updateHobbies(student); updateParent(student)">Update</button></td>
     
       </tr>
     
+
   </tbody>
 </table>
 

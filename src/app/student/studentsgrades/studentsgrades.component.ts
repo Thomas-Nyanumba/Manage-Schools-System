@@ -53,7 +53,7 @@ export class studentsgradescomponent implements OnInit {
   }
   updateHobbies(student: any): void {
     if (!student.Hobbies || student.Hobbies.trim() === '') {
-      alert("Please enter a grade before updating.");
+      alert("Please enter Hobbies before updating.");
       return;
     }
 
@@ -62,6 +62,20 @@ export class studentsgradescomponent implements OnInit {
     this.http.put(`http://localhost:3001/students/${student.id}`, updatedStudent)
       .subscribe(() => {
         this.updateMessage = `Hobbies for ${student.StudentName} updated successfully!`;
+        setTimeout(() => (this.updateMessage = ""), 3000);
+      });
+  }
+  updateParent(student: any): void {
+    if (!student.Parent || student.Parent.trim() === '') {
+      alert("Please enter parent before updating.");
+      return;
+    }
+
+    const updatedStudent = { ...student, Parent: student.Parent };
+
+    this.http.put(`http://localhost:3001/students/${student.id}`, updatedStudent)
+      .subscribe(() => {
+        this.updateMessage = `Parent for ${student.StudentName} updated successfully!`;
         setTimeout(() => (this.updateMessage = ""), 3000);
       });
 }}

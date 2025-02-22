@@ -10,6 +10,7 @@ import { StudentsEnrollmentComponent } from './student/studentsenrollment/studen
 import { StudentsProfileComponent } from './student/studentsprofile/studentsprofile.component';
 import { FormsModule } from '@angular/forms';
 import { studentsgradescomponent } from './student/studentsgrades/studentsgrades.component';
+import { RolesComponent } from './auth/roles/roles.component';
 
 @NgModule({
   declarations: [
